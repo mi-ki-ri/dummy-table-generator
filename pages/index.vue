@@ -1,6 +1,11 @@
 <template>
   <b-container fluid>
-    <b-row class="vh50">
+    <b-row class="head">
+      <b-col>
+        <h1>Dummy-Table-Generator</h1>
+      </b-col>
+    </b-row>
+    <b-row class="vh45">
       <b-col>
         <my-table
           @addRow="addRow"
@@ -14,7 +19,7 @@
         />
       </b-col>
     </b-row>
-    <b-row class="vh50">
+    <b-row class="vh45">
       <b-col>
         <b-select v-model="currentMode">
           <b-select-option value="CSV">CSV</b-select-option>
@@ -109,9 +114,16 @@ export default {
 }
 </script>
 
-<style>
-.vh50 {
-  height: 50vh;
+<style scoped>
+.container{
+  height:100vh;
+  overflow-y: scroll;
+}
+.head{
+  height: 10vh;
+}
+.vh45 {
+  height: 45vh;
   overflow: scroll;
 }
 .vh50:last-of-type{
