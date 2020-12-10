@@ -1,5 +1,5 @@
 <template>
-  <b-container class="my-table">
+  <b-container fluid class="my-table">
     <b-row class="head">
       <b-col v-for="(head, index) of keys" :key="index">
         <b-button @click="headerModalShow(index)">
@@ -26,7 +26,7 @@
     </b-row>
     <b-row>
       <b-col>
-        <b-button @click="addRow">Add Row</b-button>
+        <b-button @click="rowNumberModalShow">Change Row Count</b-button>
       </b-col>
     </b-row>
     <b-modal @ok="setType" id="modal-t" title="SetType">
@@ -43,6 +43,9 @@
     <b-modal @ok="setHeader" id="modal-h" title="SetHeader">
       <b-input v-model="currentHeader" />
     </b-modal>
+    <b-modal @ok="addRow" id="modal-n" title="SetRowCount">
+        <b-input type="number" v-model="currentNumber" />
+    </b-modal>
   </b-container>
 </template>
 
@@ -55,6 +58,7 @@ export default {
       currentSelected: 'Text',
       currentHeader: '',
       currentHeaderIndex: 0,
+      currentNumber: 1
     }
   },
   methods: {
@@ -62,7 +66,7 @@ export default {
       this.$emit('addColumn')
     },
     addRow() {
-      this.$emit('addRow')
+      this.$emit('addRow', this.currentNumber)
     },
     setType() {
       this.$emit('setType', {
@@ -88,6 +92,10 @@ export default {
       this.currentHeaderIndex = index
       this.$bvModal.show('modal-h')
     },
+    rowNumberModalShow(){
+       this. currentNumber = 1
+       this.$bvModal.show("modal-n")
+    }
   },
 }
 </script>
