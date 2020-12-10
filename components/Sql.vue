@@ -12,7 +12,7 @@ export default {
 
       textVal += '  ('
       this.keys.forEach((element) => {
-        textVal += '`' + element + '`,'
+        textVal += '"' + element + '",'
       })
       textVal = textVal.slice(0, -1)
       textVal += ')\n'
@@ -22,7 +22,7 @@ export default {
       this.obj.forEach((row) => {
         textVal += '  ('
         row.forEach((col) => {
-          textVal += '`' + col + '`,'
+          textVal += '"' + col + '",'
         })
         textVal = textVal.slice(0, -1)
         textVal += '),\n'
