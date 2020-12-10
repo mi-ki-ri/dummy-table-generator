@@ -66,6 +66,8 @@ export default {
       this.$emit('addColumn')
     },
     addRow() {
+      this.currentNumber = this.currentNumber > 999 ? 999 : this.currentNumber
+      this.currentNumber = this.currentNumber < 1 ? 1 : this.currentNumber
       this.$emit('addRow', this.currentNumber)
     },
     setType() {
@@ -93,7 +95,7 @@ export default {
       this.$bvModal.show('modal-h')
     },
     rowNumberModalShow(){
-       this. currentNumber = 1
+       this. currentNumber = 5
        this.$bvModal.show("modal-n")
     }
   },
