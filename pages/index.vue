@@ -73,7 +73,7 @@ export default {
               Math.floor(Math.random() * this.fakes[type].length)
             ]
 
-            if (type == 'Name' || type == 'Company') {
+            if (type == 'Name' || type == 'Company' || type == "Address") {
               row.push(JSON.parse( `"`+fakeVal+`"`)) // UTF-8でエスケープされているため
             } else {
               row.push(fakeVal)
