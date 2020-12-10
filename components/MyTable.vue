@@ -44,7 +44,7 @@
       <b-input v-model="currentHeader" />
     </b-modal>
     <b-modal @ok="addRow" id="modal-n" title="SetRowCount">
-        <b-input type="number" v-model="currentNumber" />
+        <b-input max="999" min="1" type="number" v-model="currentNumber" />
     </b-modal>
   </b-container>
 </template>
