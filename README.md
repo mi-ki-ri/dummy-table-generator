@@ -1,5 +1,9 @@
 # dummy-table-generator
 
+[https://mi-ki-ri.github.io/dummy-table-generator/](https://mi-ki-ri.github.io/dummy-table-generator/)
+
+
+
 ## Build Setup
 
 ```bash

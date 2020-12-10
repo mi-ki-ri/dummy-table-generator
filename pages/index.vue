@@ -115,6 +115,7 @@ export default {
   overflow: scroll;
 }
 .vh50:last-of-type{
-  border-top: 1px dashed #333;;
+  border-top: 1px dashed #333;
+  padding-top: 10px;
 }
 </style>
