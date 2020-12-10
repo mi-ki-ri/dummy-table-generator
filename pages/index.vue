@@ -101,7 +101,7 @@ export default {
     this.calculateCols()
   },
   async asyncData({ params, $http }) {
-    const jsonData = await $http.$get(`dummy.json`)
+    const jsonData = await $http.$get(`https://mi-ki-ri.github.io/dummy-table-generator/dummy.json`)
     console.log('json', jsonData)
     let fakes = jsonData
     return { fakes }
